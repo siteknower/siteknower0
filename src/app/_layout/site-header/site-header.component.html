@@ -1,0 +1,80 @@
+<div class="profile-home">
+    <!-- <p>site-header works!</p> -->
+
+    <nav class="navbar navbar-expand-sm bg-light">
+        <!-- <ul class="navbar-nav">
+          <li class="nav-item nvit">
+            <a class="nav-link" href="#">Link 1</a>
+          </li>
+          <li class="nav-item nvit">
+            <a class="nav-link" href="#">Link 2</a>
+          </li>
+          <li class="nav-item nvit">
+            <a class="nav-link" href="#">Link 3</a>
+          </li>
+        </ul> -->
+
+        &nbsp;  &nbsp;
+        <a routerLink="/home">
+        <button id="btnHome" class="btn btn-outline-secondary mybtn">Home</button>
+        </a>
+        &nbsp;
+        <a routerLink="/account">
+        <button id="btnMyAccount" class="btn btn-outline-secondary mybtn">Account</button>
+        </a>
+        &nbsp;
+        <button id="btnUsers" class="btn btn-outline-secondary mybtn">Users</button>
+        &nbsp;
+        <button id="btnTurnover" class="btn btn-outline-secondary mybtn">Turnover</button>
+        &nbsp;
+        <button id="btnClicks" class="btn btn-outline-secondary mybtn">Clicks</button>
+
+        <!-- <button class="btn-primary dsn">Right Button</button> -->
+
+
+        <div class="right">
+            <div class="tbar">
+                <!--login-bar works!-->
+              
+                <!--[hidden]="thidden"-->
+              
+                <div id="dvLogovanje" [hidden]="tLogovanjeHdn">
+                      <span id="spnLogin" (click)="Login_click()" class="logitem">
+                         Login
+                      </span> /
+                  <!-- <span id="spnLogin" (click)="onClickQ()" class="logitem">
+                      Login
+                   </span> / -->
+                  <span id="spnSignin" (click)="Signin_click()" class="logitem">
+                         Sign up
+                      </span>
+                </div>
+              
+                <div  id="dvLogged" [hidden]="tLoggedHdn" style="float:right">
+                      <span id="Span1" style="float:left">
+                         Logged:
+                           &nbsp;
+                      </span>
+                  <span id="spnLogged" ng-bind="spnLogged" style="float:left; color:green; " >
+                         {{tmember}}
+                      </span>
+                  <span id="Span2" style="float:left">
+                          &nbsp; /  &nbsp;
+                      </span>
+                  <span id="spnLogout" (click)="spnLogout_click()" class="logitem">
+                         Logout
+                      </span>
+                </div>
+              
+              
+              </div>
+        </div>
+
+
+      </nav>
+      <br>
+   
+</div>
+
+
+

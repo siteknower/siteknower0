@@ -1,0 +1,165 @@
+.profile-home {
+    /*height: 800px;*/
+    /* padding: 1px;
+    margin: 0 auto;
+    height: 200px;
+    background-color: #f4f4f4;
+    border-style: solid; */
+    /*border-width: medium;*/
+    /*background-color: gainsboro;*/
+    /*margin-top: 10px;*/
+
+    /* margin-bottom: 0px;
+    background-color: #f4f4f4;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    border-color: #d8d8d8; */
+
+    /* margin-top:-15px;
+    margin-left:-6px;
+    margin-right:-6px;
+    padding:20px ;
+    height: 100px;
+    background-color: #f4f4f4; */
+
+  }
+
+
+/* .nvit:hover {
+  cursor:pointer;
+  background-color:grey;
+  text-Decoration:underline;
+} */
+
+.mybtn {
+/* background-color: gainsboro; */
+/* color:darkslategray; */
+ height: 40px;
+ padding: 0%;
+ padding-left:10px ;
+ padding-right:10px ;
+ border: 0;
+ font-size: 20px;
+font-weight: bold;
+}
+
+.mybtn:hover {
+  cursor:pointer;
+  background-color:#D7DBDD;
+  /* text-Decoration:underline; */
+  color: darkblue;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+
+.tbar {
+  margin-top: -6px;
+  height:29px;
+  background-color: transparent;
+  padding:3px 15px 3px;
+  text-align: right;
+  font-size: 17px;
+  border-bottom: solid;
+  border-bottom-width: thin;
+  border-bottom-color: gainsboro;
+}
+
+.logitem:hover {
+  cursor:pointer;
+  color:blue;
+  text-Decoration:underline;
+}
+
+input{
+  /*background-color: #4CAF50;*/
+  /*color: white;*/
+  /*padding: 12px 20px;*/
+  /*border: solid;*/
+  /*border-width: thin;*/
+  /*border-radius: 4px;*/
+  /*cursor: pointer;*/
+  /*float: right;*/
+  width: 220px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.dvnatpis {
+  float: left;
+  width:1px;
+  margin-left: 5px;
+  margin-top: 15px;
+  /*background-color: yellow;*/
+  width: 110px;
+}
+
+.spnatpis {
+  font-size: medium;
+}
+
+.dugmaddv{
+  margin-top: 20px;
+}
+
+.tbtn{
+  width: 130px;
+}
+.tbtnm{
+  width: 100px;
+}
+
+.linkl{
+  font-size: medium;
+  float: left;
+  width:300px;
+}
+
+.headerStyles{
+  height:40px;
+  font-size: medium;
+  /*background-color:orange;*/
+  font-weight:bold;
+  padding-top: 20px;
+}
+
+.messageHeaderStyles {
+  height:20px;
+  font-size: medium;
+  font-weight:bold;
+  padding-top: 10px;
+}
+
+.messageContentStyles{
+  padding-top: 10px;
+  font-size: medium;
+  height:50px;
+  /*background-color:orange;*/
+}
+
+.messageFooterStyles{
+  margin-top: 30px;
+  /*background-color:orange;*/
+  text-align:center;
+}
+
+.spnDemo {
+  font-size: medium;
+  margin-top: 15px;
+  float: right;
+}
+
+@media screen and (max-width: 767px) {
+  .row.content {height: auto;}
+  .tcontent {width: auto;}
+
+}
+
+
