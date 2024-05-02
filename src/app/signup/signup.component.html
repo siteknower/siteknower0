@@ -1,6 +1,9 @@
 <p>signup works!</p>
+{{ doslaporuka }}
 
 <div class="container-fluid">
+  <!-- signin -->
+  <div class="tcontent" id="customWindowContent1" style="overflow: hidden;" [hidden]="tLogTipHdn1">
     <div class="row">
       <div class="col-12 text-center">
         <div class="tdiv1">Create your account</div>
@@ -11,14 +14,95 @@
         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
 
         <div class="temail">
-          <input class="tinput" type="email" name="email"
-          placeholder="Email address">
+          <input class="tinput" type="new-email" name="email3"
+          placeholder="Email address" [(ngModel)]="temail" >
         </div>
 
         <div class="tpassword">
-            <input class="tinput" type="password" name="email"
-             placeholder="Password">
+            <!-- <input class="tinput" [attr.type]="tpassword.length < 1 ? 'text': 'tpassword'" name="password1234" -->
+            <!-- <input class="tinput" type="new-password" name="tpassword" -->
+            <input class="tinput" type="new-password" name="tpassword"
+             placeholder="Password" [(ngModel)]="tpassword" autocomplete="current-password">
         </div>
+
+        <!-- <div class="tpassword">
+          <input class="tinput" [passwordMask] name="password1234" placeholder="Password" [(ngModel)]="tpassword" autocomplete="off">
+          <input type="hidden" [value]="tpassword">
+        </div> -->
+
+
+         <!-- <br> <br> -->
+         <div class="tcontinue">
+            <button class="btn btn-outline-secondary mybtn">Continue</button>
+         </div>
+
+         <div class="talready">
+           Already have an account?  &nbsp; <span class="tlogin" (click)="spnLogIn_click()"> Log in </span>
+        </div>
+
+         <div  class="torr" >
+           <div class="mor"> OR</div>
+           <div class="tcrta"></div>
+        </div>
+
+         <br><br>
+
+         <button class="btn btn-outline-secondary mybtngoogle">
+          <!-- <img class="tslika" src="assets/images/google.jpg"  width="21" height="21"  alt="Logo"> -->
+          <img class="tslika" src="assets/images/google.jpg"  width="21" height="21"  alt="Logo">
+          <img class="hover-tslika" src="assets/images/google2.jpg"  width="21" height="21"  alt="Logo">
+          &nbsp;&nbsp;&nbsp; &nbsp;  &nbsp;Continue with Google
+        </button>
+
+        <br> <br>
+
+        <button class="btn btn-outline-secondary mybtngoogle">
+          <!-- <img class="tslika" src="assets/images/google.jpg"  width="21" height="21"  alt="Logo"> -->
+          <img class="tslika" src="assets/images/microsoft2.jpg"  width="21" height="21"  alt="Logo">
+          <img class="hover-tslika" src="assets/images/microsoft2.jpg"  width="21" height="21"  alt="Logo">
+          &nbsp;&nbsp;&nbsp; &nbsp;  &nbsp;Continue with Microsoft Account
+        </button>
+
+        <br> <br><br> <br><br> <br>
+         
+        <div class="tdiv2">
+          <span class="tspan">Terms of Use </span> &nbsp;&nbsp; |&nbsp;&nbsp; <span class="tspan">Privacy Policy </span> 
+        </div>
+
+        <br>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- login -->
+  <div class="tcontent" id="customWindowContent1" style="overflow: hidden;" [hidden]="tLogTipHdn2">
+    <div class="row">
+      <div class="col-12 text-center">
+        <div class="tdiv1">Login</div>
+        <br>
+
+        <!-- <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+
+        <div class="temail">
+          <input class="tinput" type="new-email" name="email3"
+          placeholder="Email address" [(ngModel)]="temail" >
+        </div>
+
+        <div class="tpassword">
+            <!-- <input class="tinput" [attr.type]="tpassword.length < 1 ? 'text': 'tpassword'" name="password1234" -->
+            <!-- <input class="tinput" type="new-password" name="tpassword" -->
+            <input class="tinput" type="new-password" name="tpassword"
+             placeholder="Password" [(ngModel)]="tpassword" autocomplete="current-password">
+        </div>
+
+        <!-- <div class="tpassword">
+          <input class="tinput" [passwordMask] name="password1234" placeholder="Password" [(ngModel)]="tpassword" autocomplete="off">
+          <input type="hidden" [value]="tpassword">
+        </div> -->
+
 
          <!-- <br> <br> -->
          <div class="tcontinue">
@@ -60,9 +144,11 @@
 
         <br>
 
-       
-
-
       </div>
     </div>
   </div>
+
+<br>
+<br>
+
+
