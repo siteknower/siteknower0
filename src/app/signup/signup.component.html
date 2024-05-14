@@ -21,13 +21,18 @@
         <div class="tpassword">
             <!-- <input class="tinput" [attr.type]="tpassword.length < 1 ? 'text': 'tpassword'" name="password1234" -->
             <!-- <input class="tinput" type="new-password" name="tpassword" -->
-            <input #psw1 class="tinput" type="new-password" name="tpassword"
+            <input #psw1 class="tinput" name="tpassword"  type="password" [type]="hidepasw ? 'password' : 'text'"
              placeholder="Password" [(ngModel)]="tpassword1" autocomplete="current-password">
-        </div>
 
-        <div class="row tmessage">
-          
-      </div>
+        </div>
+       
+        <span class="input-placeholder">
+          <!-- <input style="float: left" [(ngModel)]="tpassword1" type="password" id="inputPassword"  name="password"  [type]="hidepasw ? 'password' : 'text'" placeholder="Enter password"  required> -->
+          <mat-icon class="placeholder" (click)="myhidepasw()">{{hidepasw ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </span>
+
+        <div class="row tmessage">               
+        </div>
       
         <!-- <div class="tpassword">
           <input class="tinput" [passwordMask] name="password1234" placeholder="Password" [(ngModel)]="tpassword" autocomplete="off">

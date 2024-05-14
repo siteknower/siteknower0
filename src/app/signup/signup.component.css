@@ -1,7 +1,14 @@
+.tcontent{
+  margin-top: 50px
+}
+
 .tdiv1 {
+  padding-top: 10px;
     font-size: 33px;
     font-family:Arial, Helvetica, sans-serif;
     font-weight: bold;
+    height: 40px;
+    /* background-color: coral; */
 }
 
 .tcontinue{
@@ -171,6 +178,7 @@ messageHeaderStyles {
 
 .messageContentStyles{
   padding-top: 20px;
+  padding-left: 10px;
   /* font-size: medium; */
   font-size: 15px;
   /* font-weight: bold; */
@@ -182,4 +190,23 @@ messageHeaderStyles {
   margin-top: 30px;
   /*background-color:orange;*/
   text-align:center;
+}
+
+/* 
+input.example-right-align {
+  -moz-appearance: textfield;
+} */
+
+.placeholder{
+    position: absolute;
+    top: -53px;
+    bottom: 0;
+    height: 24px;
+    font-size: 25px;
+    left: 133px;
+    margin: auto;
+}
+
+.input-placeholder {
+  position: relative;
 }

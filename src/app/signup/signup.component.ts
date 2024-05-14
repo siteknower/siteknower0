@@ -40,6 +40,8 @@ export class SignupComponent {
   temail2: string = '';
   tpassword2: string = '';
 
+  hidepasw: boolean = true;
+
   // @ViewChild('messageWindow') messageWindow: jqxWindowComponent | undefined;
   @ViewChild('messageWindow') messageWindow: jqxWindowComponent | undefined;
   @ViewChild('psw1') inppsw1: ElementRef | undefined;
@@ -73,6 +75,10 @@ export class SignupComponent {
           }
         }
       });
+  }
+
+  myhidepasw() {
+    this.hidepasw = !this.hidepasw;
   }
 
   ngOnInit(): void {
@@ -138,7 +144,7 @@ export class SignupComponent {
    }
 
    addlog(): void {
-    alert ("addlog");
+    // alert ("addlog");
 
     if (this.temail1.length === 0) {
         this.tfokusiraj = 'email1';
@@ -152,6 +158,18 @@ export class SignupComponent {
         }
     }
    
+    if ( this.validateMail(this.temail1) === 0) {
+      this.tfokusiraj = 'email1';
+
+      this.tmessage = 'Incorrect email address.';
+      if (typeof (this.messageWindow) != 'undefined') {
+        this.messageWindow.position('center');
+        this.messageWindow.open();
+
+        return;
+      }
+    }
+
     if (this.tpassword1.length === 0) {
       this.tfokusiraj = 'password1';
 
@@ -163,25 +181,36 @@ export class SignupComponent {
         return;
       }
 
-  }
+    }
 
-    // this.asmxservice.addlog("zzz@zt", "lozinka2")
-    // .subscribe(data => {
-    //   alert (data.tekst1);
 
-    //   if (data.tekst1=='Ok') {
-    //         if (data.tekst3.length > 0) {
-    //           let b = data.tekst3;
+    this.asmxservice.addlog(this.temail1, this.tpassword1)
+    .subscribe(data => {
+      alert (data.tekst1);
+
+      if (data.tekst1=='yes') {
+            // if (data.tekst3.length > 0) {
+            //   let b = data.tekst3;
   
-    //         } else {
+            // } else {
   
-    //         }
-  
-    //   } else {  
-    //         alert ('greska 83518');
-    //   }
+            // }
+
+            this.tfokusiraj = 'email1';
+
+            this.tmessage = data.tekst2;
+            if (typeof (this.messageWindow) != 'undefined') {
+              this.messageWindow.position('center');
+              this.messageWindow.open();
       
-    //   });
+              return;
+            }
+  
+      } else {  
+            alert ('ok je');
+      }
+      
+      });
 
    }
 
@@ -225,6 +254,23 @@ export class SignupComponent {
     //   this.inpeml2.nativeElement.focus();
     // }
 
+  }
+
+  validateMail(gemail: string): number {
+    let rslt = 0;
+    // var email = $("#txtEmail").val();
+    if (gemail === '') {return 1;}
+    if (this.validateEmail(gemail)) {
+      rslt = 1;
+    } else {
+      rslt = 0;
+    }
+    return rslt;
+  }
+
+  validateEmail(temail: string): boolean {
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(temail);
   }
 
 }

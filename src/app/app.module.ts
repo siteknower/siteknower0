@@ -20,7 +20,10 @@ import { jqxGridModule } from 'jqwidgets-ng/jqxgrid';
 import { jqxButtonComponent, jqxButtonModule } from 'jqwidgets-ng/jqxbuttons'
 import { jqxCheckBoxComponent, jqxCheckBoxModule } from 'jqwidgets-ng/jqxcheckbox';  
 import{ jqxWindowComponent, jqxWindowModule } from 'jqwidgets-ng/jqxwindow';   
-import{ jqxListBoxComponent, jqxListBoxModule } from 'jqwidgets-ng/jqxlistbox';         
+import{ jqxListBoxComponent, jqxListBoxModule } from 'jqwidgets-ng/jqxlistbox';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';     
+import { MatButtonModule } from '@angular/material/button'; 
+import { MatIconModule } from '@angular/material/icon';    
 
 @NgModule({
   declarations: [
@@ -44,6 +47,9 @@ import{ jqxListBoxComponent, jqxListBoxModule } from 'jqwidgets-ng/jqxlistbox';
     jqxCheckBoxModule,
     jqxWindowModule,
     jqxListBoxModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
