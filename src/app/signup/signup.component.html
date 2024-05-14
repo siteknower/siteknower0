@@ -1,5 +1,5 @@
 <p>signup works!</p>
-{{ doslaporuka }}
+<!-- {{ doslaporuka }} -->
 
 <div class="container-fluid">
   <!-- signin -->
@@ -14,17 +14,21 @@
         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
 
         <div class="temail">
-          <input class="tinput" type="new-email" name="email3"
-          placeholder="Email address" [(ngModel)]="temail" >
+          <input  #eml1 class="tinput" type="new-email" name="email3"
+          placeholder="Email address" [(ngModel)]="temail1" >
         </div>
 
         <div class="tpassword">
             <!-- <input class="tinput" [attr.type]="tpassword.length < 1 ? 'text': 'tpassword'" name="password1234" -->
             <!-- <input class="tinput" type="new-password" name="tpassword" -->
-            <input class="tinput" type="new-password" name="tpassword"
-             placeholder="Password" [(ngModel)]="tpassword" autocomplete="current-password">
+            <input #psw1 class="tinput" type="new-password" name="tpassword"
+             placeholder="Password" [(ngModel)]="tpassword1" autocomplete="current-password">
         </div>
 
+        <div class="row tmessage">
+          
+      </div>
+      
         <!-- <div class="tpassword">
           <input class="tinput" [passwordMask] name="password1234" placeholder="Password" [(ngModel)]="tpassword" autocomplete="off">
           <input type="hidden" [value]="tpassword">
@@ -33,7 +37,7 @@
 
          <!-- <br> <br> -->
          <div class="tcontinue">
-            <button class="btn btn-outline-secondary mybtn">Continue</button>
+            <button class="btn btn-outline-secondary mybtn" (click)="addlog()">Continue</button>
          </div>
 
          <div class="talready">
@@ -88,14 +92,18 @@
 
         <div class="temail">
           <input class="tinput" type="new-email" name="email3"
-          placeholder="Email address" [(ngModel)]="temail" >
+          placeholder="Email address" [(ngModel)]="temail2" >
         </div>
 
         <div class="tpassword">
             <!-- <input class="tinput" [attr.type]="tpassword.length < 1 ? 'text': 'tpassword'" name="password1234" -->
             <!-- <input class="tinput" type="new-password" name="tpassword" -->
-            <input class="tinput" type="new-password" name="tpassword"
-             placeholder="Password" [(ngModel)]="tpassword" autocomplete="current-password">
+            <input class="tinput" type="new-password" name="tpassword2"
+             placeholder="Password" [(ngModel)]="tpassword2" autocomplete="current-password">
+        </div>
+
+        <div class="row tmessage">
+            poruka
         </div>
 
         <!-- <div class="tpassword">
@@ -105,12 +113,12 @@
 
 
          <!-- <br> <br> -->
-         <div class="tcontinue">
+         <div class="tcontinue2">
             <button class="btn btn-outline-secondary mybtn">Continue</button>
          </div>
 
          <div class="talready">
-           Already have an account?  &nbsp; <span class="tlogin"> Log in </span>
+           Don't have an account?  &nbsp; <span class="tlogin" (click)="spnSugnUp_click()"> Sign  up </span>
         </div>
 
          <div  class="torr" >
@@ -151,4 +159,30 @@
 <br>
 <br>
 
+
+<jqxWindow #messageWindow
+           [theme]="'material'"
+           [width]="260"
+           [height]="170"
+           [resizable]="false"
+           [draggable]="true"
+           [cancelButton]="'.cancelButton'"
+           [isModal]="true"
+           [autoOpen]="false"
+           [modalOpacity]="0.3"
+           [animationType]="'slide'"
+           [title]= "'Message'"
+           style="position: fixed; left: 50%; top: 50%;">
+  <div class="messageHeaderStyles">
+    Messagw
+  </div>
+  <div class="messageContentStyles">
+    {{ tmessage }}
+    <div class="messageFooterStyles">
+      <button class="btn btn-primary tbtnm" (click)="closeMessage()" type="submit">OK</button>
+    </div>
+  </div>
+
+
+</jqxWindow>
 

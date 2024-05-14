@@ -130,7 +130,7 @@ export class SiteHeaderComponent {
   }
 
   sendMessage2(): void {
-    alert('Šaljem');
+    // alert('Šaljem');
     
     // send message to subscribers via observable subject
     this.messageService.sendMessage2(this.dekl);

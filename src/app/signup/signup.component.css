@@ -5,7 +5,11 @@
 }
 
 .tcontinue{
-  margin-top: 25px
+  margin-top: 5px
+}
+
+.tcontinue2{
+  margin-top: 5px
 }
 
 .tpassword{
@@ -144,3 +148,38 @@
  cursor:pointer;
 }
 
+.tmessage{
+  height:20px;
+  background-color: transparent;
+  width: 340px;
+  text-align: left;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  padding-top: 0px;
+}
+
+messageHeaderStyles {
+  height:20px;
+  /* font-size: medium;
+  font-weight:bold; */
+  font-size: 15px;
+  /* font-weight: bold; */
+  padding-top: 10px;
+}
+
+.messageContentStyles{
+  padding-top: 20px;
+  /* font-size: medium; */
+  font-size: 15px;
+  /* font-weight: bold; */
+  height:50px;
+  /*background-color:orange;*/
+}
+
+.messageFooterStyles{
+  margin-top: 30px;
+  /*background-color:orange;*/
+  text-align:center;
+}

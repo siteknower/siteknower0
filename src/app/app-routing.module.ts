@@ -7,7 +7,7 @@ import { LoginBarComponent } from './_layout/login-bar/login-bar.component';
 
 import { HomeComponent } from './home/home.component';
 import { AccountComponent } from './account/account.component';
-
+import { UsersComponent } from './users/users.component';
 import { SignupComponent } from './signup/signup.component';
 
 
@@ -23,6 +23,7 @@ const routes: Routes = [
       // { path: 'glavna', component: GlavnaComponent },
       { path: 'home', component: HomeComponent },
       { path: 'account', component: AccountComponent },
+      { path: 'users', component: UsersComponent },
       { path: 'signup', component: SignupComponent },
       // { path: 'notlogged', component: NotloggedComponent },
       // { path: 'liststudents2', component: Liststudents2Component },
