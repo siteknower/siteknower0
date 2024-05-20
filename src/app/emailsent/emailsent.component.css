@@ -1,0 +1,213 @@
+.tcontent{
+    margin-top: 50px
+  }
+  
+  .tdiv1 {
+    padding-top: 10px;
+      font-size: 33px;
+      font-family:Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      height: 40px;
+      /* background-color: coral; */
+  }
+  
+  .tcontinue{
+    margin-top: 5px
+  }
+  
+  .tcontinue2{
+    margin-top: 5px
+  }
+  
+  .tpassword{
+    margin-top: 15px
+  }
+  
+  .talready{
+    margin-top: 25px
+  }
+  
+  .torr{
+    position: relative;
+    margin-top: 15px
+  }
+  
+  .tinput{
+      width: 340px;
+      height: 50px;
+      border-top-color: rgb(2, 189, 2);
+      border-left-color:  rgb(2, 189, 2);
+      border-right-color: green;
+      border-bottom-color: green;
+      border-width: 1px;
+      padding-left: 10px;
+      border-radius: 5px;
+  }
+  
+  .mybtn{
+      width: 340px;
+      height: 50px;
+      background-color: rgb(13, 126, 13);
+      color: white;
+  }
+  
+  .mybtn:hover {
+      cursor:pointer;
+      background-color: rgb(11, 104, 11);
+     
+    }
+  
+  .tlogin{
+      cursor:pointer;
+      color:  rgb(13, 126, 13);
+    }
+  
+    .tlogin:hover{
+      text-Decoration:underline;
+    }
+  
+  .mor{
+    margin-top: 20px;
+    width: 50px;
+    height: 20px;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);-color: rgb(164, 152, 231); 
+  
+    background-color: white;
+    z-index: 100;
+  }
+  
+  .tcrta{
+    margin-top: 22px;
+    width: 340px;
+    height: 1px;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    background-color: gray;
+  }
+  
+  .mybtngoogle{
+    position: relative;
+  
+    margin-left: 10px;
+    width: 340px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    text-align:left; 
+    padding-left:20px;
+    /* background: url("/assets/images/google.jpg") no-repeat; */
+  }
+  
+  .mybtngoogle:hover {
+    cursor:pointer;
+    background-color: gainsboro;
+   
+  }
+  
+  /* .mybtngoogle:hover ~ .tslika { background: url("/assets/images/google2.jpg") no-repeat;} */
+  
+  /* .tslika { background: url("/assets/images/google2.jpg") no-repeat;} */
+  
+  /* .mybtngoogle {
+    background-color: blue; 
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+  } */
+  
+  .mybtngoogle img {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+  
+    display: block;
+    /* width: 100%; */
+    /* height: auto; */
+    transition: opacity 0.3s; /* Smooth transition for opacity property */
+  }
+  
+  .mybtngoogle .hover-tslika {
+    opacity: 0; /* Initially hidden */
+  }
+  
+  .mybtngoogle:hover .tslika {
+    opacity: 0; /* Hide default image on hover */
+  }
+  
+  .mybtngoogle:hover .hover-tslika {
+    opacity: 1; /* Show hover image on hover */
+  }
+  
+  .tspan {
+   color:rgb(13, 126, 13);
+   cursor:pointer;
+  }
+  
+  .tmessage{
+    height:20px;
+    background-color: transparent;
+    width: 340px;
+    text-align: left;
+  
+    margin-right: auto;
+    margin-left: auto;
+  
+    padding-top: 0px;
+  }
+  
+  messageHeaderStyles {
+    height:20px;
+    /* font-size: medium;
+    font-weight:bold; */
+    font-size: 15px;
+    /* font-weight: bold; */
+    padding-top: 10px;
+  }
+  
+  .messageContentStyles{
+    padding-top: 20px;
+    padding-left: 10px;
+    /* font-size: medium; */
+    font-size: 15px;
+    /* font-weight: bold; */
+    height:50px;
+    /*background-color:orange;*/
+  }
+  
+  .messageFooterStyles{
+    margin-top: 30px;
+    /*background-color:orange;*/
+    text-align:center;
+  }
+  
+  /* 
+  input.example-right-align {
+    -moz-appearance: textfield;
+  } */
+  
+  .placeholder{
+      position: absolute;
+      top: -53px;
+      bottom: 0;
+      height: 24px;
+      font-size: 25px;
+      left: 133px;
+      margin: auto;
+  }
+  
+  .input-placeholder {
+    position: relative;
+  }
+  

@@ -32,6 +32,7 @@ export const environment = {
   toffset: 0,
   tsearchstring: '',
   THOST: 'localhost',
+  temail: ''
 };
 
 /*

@@ -1,4 +1,4 @@
-<p>signup works!</p>
+<!-- <p>signup works!</p> -->
 <!-- {{ doslaporuka }} -->
 
 <div class="container-fluid">
@@ -14,15 +14,16 @@
         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
 
         <div class="temail">
-          <input  #eml1 class="tinput" type="new-email" name="email3"
+          <input  #eml1 class="tinput" type="new-email" name="email2"
           placeholder="Email address" [(ngModel)]="temail1" >
         </div>
 
         <div class="tpassword">
             <!-- <input class="tinput" [attr.type]="tpassword.length < 1 ? 'text': 'tpassword'" name="password1234" -->
             <!-- <input class="tinput" type="new-password" name="tpassword" -->
-            <input #psw1 class="tinput" name="tpassword"  type="password" [type]="hidepasw ? 'password' : 'text'"
-             placeholder="Password" [(ngModel)]="tpassword1" autocomplete="current-password">
+            <!-- <input #psw1 class="tinput" name="tpassword" type="new-password"  -->
+            <input #psw1 class="tinput" name="tpassword" autocomplete="new-password"  [type]="hidepasw ? 'password' : 'text'" 
+             placeholder="Password" [(ngModel)]="tpassword1" >
 
         </div>
        

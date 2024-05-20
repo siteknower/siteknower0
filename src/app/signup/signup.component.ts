@@ -1,4 +1,5 @@
 import { Component, OnInit, Inject, Injectable, ViewChild } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Directive, ElementRef, HostListener } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
@@ -50,7 +51,8 @@ export class SignupComponent {
   constructor(
     public dekl: Dekl,
     private messageService: MessageComponentService,
-    private asmxservice: AsmxService
+    private asmxservice: AsmxService,
+    private router: Router,
   ) { 
     this.subscription = this.messageService.getMessage().subscribe(
       message => {
@@ -102,6 +104,13 @@ export class SignupComponent {
     }
   }
 
+  ngAfterViewInit(): void {
+
+    var a =0;
+
+    // this.tpassword1 = '3';
+  }
+
   spnLogIn_click(): void {
 
     this.tLogTipHdn1 = true;
@@ -141,6 +150,11 @@ export class SignupComponent {
       
       });
     
+   }
+
+   addlog0(): void {
+    this.router.navigate(['emailsent']);
+
    }
 
    addlog(): void {
@@ -188,14 +202,8 @@ export class SignupComponent {
     .subscribe(data => {
       alert (data.tekst1);
 
-      if (data.tekst1=='yes') {
-            // if (data.tekst3.length > 0) {
-            //   let b = data.tekst3;
-  
-            // } else {
-  
-            // }
-
+      if (data.tekst1=='yes' || data.tekst1=='error')  {
+           
             this.tfokusiraj = 'email1';
 
             this.tmessage = data.tekst2;
@@ -205,9 +213,9 @@ export class SignupComponent {
       
               return;
             }
-  
       } else {  
-            alert ('ok je');
+            // alert ('ok je ' +data.tekst2);
+            this.router.navigate(['emailsent']);
       }
       
       });
@@ -290,5 +298,9 @@ export class SignupComponent {
     }
     return result;
   }
+
+
+  //adacco@globalnet.hr
+  //voledo1234567890
   
   

@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { AccountComponent } from './account/account.component';
 import { UsersComponent } from './users/users.component';
 import { SignupComponent } from './signup/signup.component';
-
+import { EmailsentComponent } from './emailsent/emailsent.component';    
 
 const routes: Routes = [
 
@@ -25,6 +25,7 @@ const routes: Routes = [
       { path: 'account', component: AccountComponent },
       { path: 'users', component: UsersComponent },
       { path: 'signup', component: SignupComponent },
+      
       // { path: 'notlogged', component: NotloggedComponent },
       // { path: 'liststudents2', component: Liststudents2Component },
       // { path: 'paging', component: PagingComponent },
@@ -47,7 +48,8 @@ const routes: Routes = [
       // { path: 'sajtsearch', component: SajtsearchComponent },
 
     ]
-  }
+  },
+  { path: 'emailsent', component: EmailsentComponent }
 ];
 
 
