@@ -64,7 +64,7 @@ export class SiteHeaderComponent {
     this.tLogTipHdn4 = true;
 
     this.dekl.tlogin=2;
-    this.router.navigate(['signup']);
+    this.router.navigate(['signup', '0']);
 
     this.dekl.tekst3 = 'log';
     this.globv.emit_to_page = 'login';
@@ -103,7 +103,7 @@ export class SiteHeaderComponent {
     // this.loginWindow.open();
 
     this.dekl.tlogin=1;
-    this.router.navigate(['signup']);
+    this.router.navigate(['signup', '0']);
 
     this.dekl.tekst3 = 'sign';
     this.globv.emit_to_page = 'login';

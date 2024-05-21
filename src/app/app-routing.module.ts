@@ -24,7 +24,7 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent },
       { path: 'account', component: AccountComponent },
       { path: 'users', component: UsersComponent },
-      { path: 'signup', component: SignupComponent },
+      { path: 'signup/:param1', component: SignupComponent },
       
       // { path: 'notlogged', component: NotloggedComponent },
       // { path: 'liststudents2', component: Liststudents2Component },

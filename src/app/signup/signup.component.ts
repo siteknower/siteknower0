@@ -53,6 +53,7 @@ export class SignupComponent {
     private messageService: MessageComponentService,
     private asmxservice: AsmxService,
     private router: Router,
+    private route: ActivatedRoute
   ) { 
     this.subscription = this.messageService.getMessage().subscribe(
       message => {
@@ -102,6 +103,24 @@ export class SignupComponent {
       this.tLogTipHdn3 = true;
       this.tLogTipHdn4 = true;
     }
+
+    this.route.paramMap.subscribe(params => {
+      // Access the parameters from the URL
+      const param1 = params.get('param1'); // Replace 'param1' with your parameter name
+      // const param2 = params.get('param2'); // Replace 'param2' with your parameter name
+      
+      // Do whatever you need with the parameters
+      // 'alert('Param1:'+ param1);
+
+      if (param1 == '1') {
+        this.tLogTipHdn1 = true;
+        this.tLogTipHdn2 = false;
+        this.tLogTipHdn3 = true;
+        this.tLogTipHdn4 = true;
+      }
+      // console.log('Param2:', param2);
+    });
+
   }
 
   ngAfterViewInit(): void {
@@ -196,7 +215,6 @@ export class SignupComponent {
       }
 
     }
-
 
     this.asmxservice.addlog(this.temail1, this.tpassword1)
     .subscribe(data => {
